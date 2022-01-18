@@ -1,15 +1,19 @@
 #include "C_redito_carto.h"
 
 int main()
-{
 
+{
 	setlocale(0, "");
 
 	int vibor_meny = 1, viboR;
 
-	Debit d;
-	Credit c;
-	Bank* ptr[2] = { &d,&c };
+	zarplat_carto d;
+
+	Credito_carto c;
+
+	Baban_kkkk* ptr[2] = { &d,&c };
+
+
 	do
 	{
 		system("color F0");
@@ -28,10 +32,11 @@ int main()
 		system("cls");
 		do
 		{
-			int mon, day;
+			int m, d;
 			cout << "\n|$$$$$$$$$$$$$$$$$$$$$$$$$$$|\n|1-“екущий баланс           |\n|2-ƒобавить расход по карте |\n|3-¬се расходы за день      |\n|4-¬се расходы за неделю    |\n|5-¬се расходы за мес€ц     |\n|6-ѕоложить деньги на счет  |\n|0-¬ меню выбора карт       |\n|$$$$$$$$$$$$$$$$$$$$$$$$$$$|\n";
 			cout << "$$$";
 			cin >> vibor_meny;
+
 			system("cls");
 			switch (vibor_meny)
 			{
@@ -50,29 +55,29 @@ int main()
 			case 3:
 			{
 				system("color F3");
-				cout << "¬ведите мес€ц: ";
-				cin >> mon;
-				cout << "¬ведите день: ";
-				cin >> day;
-				ptr[viboR]->rashodi_za_den(mon, day);
+				cout << "¬ведите мес€ц\n";
+				cin >> m;
+				cout << "¬ведите день\n";
+				cin >> d;
+				ptr[viboR]->rashodi_za_den(m, d);
 				break;
 			}
 			case 4:
 			{
 				system("color F4");
-				cout << "¬ведите мес€ц: ";
-				cin >> mon;
-				cout << "¬ведите день(начало недели): ";
-				cin >> day;
-				ptr[viboR]->rashodi_za_nedely(mon, day);
+				cout << "¬ведите мес€ц\n";
+				cin >> m;
+				cout << "¬ведите день(начало недели)\n";
+				cin >> d;
+				ptr[viboR]->rashodi_za_nedely(m, d);
 				break;
 			}
 			case 5:
 			{
 				system("color F5");
-				cout << "¬ведите мес€ц: ";
-				cin >> mon;
-				ptr[viboR]->rashodi_za_mesavibor(mon);
+				cout << "¬ведите мес€ц\n";
+				cin >> m;
+				ptr[viboR]->rashodi_za_mesavibor(m);
 				break;
 			}
 			case 6:

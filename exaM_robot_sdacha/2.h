@@ -1,9 +1,14 @@
-#include "1.h"
-/*Файл с реализацией класса родителя и виртуальных функций*/
-class Bank
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <time.h>
+#include <string>
+using namespace std;
+
+class Baban_kkkk
 {
 public:
-	Bank() {}
+	Baban_kkkk() {}
 	virtual int blanas_karty() = 0;
 	virtual void polozit_dengi() = 0;
 	virtual void dobavit_traty() = 0;
@@ -13,7 +18,7 @@ public:
 	virtual void rashodi_za_den(int d, int day) = 0;
 	virtual void rashodi_za_nedely(int d, int day) = 0;
 	virtual void rashodi_za_mesavibor(int d) = 0;
-	~Bank() = default;
+	~Baban_kkkk() = default;
 
 private:
 
